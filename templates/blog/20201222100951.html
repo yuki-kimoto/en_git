@@ -1,23 +1,23 @@
-<h2>git checkout - ブランチの変更</h2>
+<h2> git checkout --branch change </ h2>
 
-ブランチを変更するには<b>git checkout</b>コマンドを使用します。
+Use the <b> git checkout </ b> command to change the branch.
 
 <pre>
-git checkout ブランチ名
-</pre>
+git checkout branch name
+</ pre>
 
-ブランチが指し示してるコミットの内容にファイルとディレクトリが切り替わります。
+The file and directory will switch to the commit content pointed to by the branch.
 
-<h3>ワーキングディレクトリに変更があってもブランチを変更できる場合があるのはなぜですか?</h3>
+<h3> Why can I change the branch even if the working directory changes? </ h3>
 
-ワーキングディレクトリに変更があった場合は、切り替え先のブランチに対して、矛盾する内容の修正であれば、git checkoutは失敗します。
+If there is a change in the working directory, git checkout will fail if you fix any inconsistencies in the branch you're switching to.
 
-矛盾する内容の修正でなければ、ワーキングディレクトリの変更を維持したままブランチが切り替わります。
+If there are no inconsistent corrections, the branch will switch while keeping the working directory changes.
 
-<h3>ブランチを作成するには?</h3>
+<h3> How to create a branch? </ h3>
 
-ブランチの作成については、ブランチの作成の記事を参考にしてください。
+For information on creating a branch, see the article on creating a branch.
 
 <ul>
-  <li><a href="/blog/20201220091244.html">git branch - ブランチの一覧表示・ブランチの作成</a></li>
-</ul>
+  <li> <a href="/blog/20201220091244.html"> git branch --List branch / Create branch </a> </ li>
+</ ul>

@@ -1,79 +1,79 @@
-<div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
+        <span itemprop = "name"> Git </ span>
       </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <meta itemprop = "position" content = "1" />
+    </ li>
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
+        <span itemprop = "name"> command </ span>
       </a>
-      <meta itemprop="position" content="2" />
-    </li>
+      <meta itemprop = "position" content = "2" />
+    </ li>
     <li>
       here
-    </li>
-  </ul>
-</div>
+    </ li>
+  </ ul>
+</ div>
 
-<h2>git remote - リモートリポジトリの追加・変更・削除</h2>
+<h2> git remote --Add / Modify / Delete Remote Repository </ h2>
 
-git remoteコマンドは、リモートリポジトリの追加・変更・削除を行うコマンドです。もうすこし、正確に書くと、URLで表現されるリモートリポジトリを表す簡単な名前を、追加・変更・削除するコマンドです。
+The git remote command is a command to add / modify / delete a remote repository. To be more precise, it is a command to add / change / delete a simple name that represents a remote repository expressed by a URL.
 
-以下の解説は、便宜的にリモートリポジトリの追加・変更・削除という言葉で書きますが、実際の内容は、URLで表現されるリモートリポジトリを表す簡単な名前を、追加・変更・削除しているということを意識してください。
+The following explanation is written in terms of adding / changing / deleting the remote repository for convenience, but the actual content is adding / changing / deleting the simple name that represents the remote repository expressed in the URL. Please be aware of that.
 
-<h3>リモートリポジトリの追加</h3>
+<h3> Add remote repository </ h3>
 
-リモートリポジトリを追加するには「git remote add」コマンドを使用します。最初の引数は、リモートブランチの名前、第二引数は、リモートブランチのURLです。
+Use the "git remote add" command to add a remote repository. The first argument is the name of the remote branch and the second argument is the URL of the remote branch.
 
-デフォルトのリモートリポジトリの名前は、慣習で「origin」です。
+The name of the default remote repository is customarily "origin".
 
 <pre>
-# リモートリポジトリの追加
+#Add remote repository
 git remote add origin git@github.com:yuki-kimoto/perlzemigit.git
-</pre>
+</ pre>
 
-<h3>リモートリポジトリの変更</h3>
+<h3> Modify remote repository </ h3>
 
-リモートリポジトリ名が指しているURLを変更するには「git remote set-url」コマンドを使用します。
+Use the "git remote set-url" command to change the URL that the remote repository name points to.
 
 <pre>
 git remote set-url origin git@github.com:yuki-kimoto/ohter.git
-</pre>
+</ pre>
 
-<h3>リモートリポジトリの削除</h3>
+<h3> Delete remote repository </ h3>
 
-リモートリポジトリの削除するには「git remote remove」コマンドを使用します。
+Use the "git remote remove" command to remove a remote repository.
 
 <pre>
 git remote remove origin
-</pre>
+</ pre>
 
-<h3>リモートリポジトリの一覧の表示</h3>
+<h3> Display list of remote repositories </ h3>
 
-リモートリポジトリの一覧を表示するには「git remote」とします。
+Use "git remote" to see a list of remote repositories.
 
 <pre>
 git remote
-</pre>
+</ pre>
 
-出力結果のサンプルです。
+This is a sample output result.
 
 <pre>
 origin
-</pre>
+</ pre>
 
-リモートリポジトリが、どのURLを指しているかを知りたい場合は「git remote」の「-v」オプションを使用します。
+If you want to know which URL the remote repository points to, use the "-v" option of "git remote".
 
 <pre>
 git remote -v
-</pre>
+</ pre>
 
-出力結果のサンプルです。
+This is a sample output result.
 
 <pre>
-origin  git@github.com:yuki-kimoto/perlzemigit.git (fetch)
-origin  git@github.com:yuki-kimoto/perlzemigit.git (push)
-</pre>
+origin git@github.com:yuki-kimoto/perlzemigit.git (fetch)
+origin git@github.com:yuki-kimoto/perlzemigit.git (push)
+</ pre>

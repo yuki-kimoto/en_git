@@ -1,94 +1,94 @@
-<div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
+        <span itemprop = "name"> Git </ span>
       </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <meta itemprop = "position" content = "1" />
+    </ li>
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop="name">入門</span>
+        <span itemprop = "name"> Introduction </ span>
       </a>
-      <meta itemprop="position" content="2" />
-    </li>
+      <meta itemprop = "position" content = "2" />
+    </ li>
     <li>
       here
-    </li>
-  </ul>
-</div>
+    </ li>
+  </ ul>
+</ div>
 
-<h2>Gitで管理しないファイルを設定する - .gitignore</h2>
+<h2> Set files not managed by Git --.gitignore </ h2>
 
-Gitで管理しないファイルを設定しておくには「.gitignore」ファイルを使用します。<a href="https://en.linux.perlzemi.com/blog/20191205081119.html">touch</a>コマンドでファイルを作成します。「.gitignore」で記述しておくと、<a href="/blog/20201112094521.html">git addコマンド</a>で、コミット準備の状態にされなくなります。
+Use the ".gitignore" file to set files that are not managed by Git. Create the file with the <a href="https://en.linux.perlzemi.com/blog/20191205081119.html"> touch </a> command. If you write it in ".gitignore", it will not be ready for commit with <a href="/blog/20201112094521.html"> git add command </a>.
 
 <pre>
 touch .gitignore
-</pre>
+</ pre>
 
-.gitignoreは、リポジトリのどこにでも置くことができますが、リポジトリのトップで管理することを、推奨します。
+.gitignore can be placed anywhere in the repository, but it is recommended to manage it at the top of the repository.
 
-<h4>絶対パス</h4>
+<h4> Absolute path </ h4>
 
-絶対パスで記述すると、Gitリポジトリのルートからの記述になります。
+If you write it with an absolute path, it will be written from the root of the Git repository.
 
-「/foo」が管理されなくなる。
-
-<pre>
-/foo
-</pre>
-
-「/foo/bar」が管理されなくなる。
+"/ Foo" is no longer managed.
 
 <pre>
-/foo/bar
-</pre>
+/ foo
+</ pre>
 
-<h4>相対パス</h4>
+"/ Foo / bar" is no longer managed.
 
-相対パスで書くと、Gitリポジトリのルートディレクトリの中のどこかに含まれているファイルが管理されなくなります。
+<pre>
+/ foo / bar
+</ pre>
 
-以下の場合は「foo.txt」というファイルすべてが、管理されなくなります。
+<h4> Relative path </ h4>
+
+If you write it with a relative path, the files contained somewhere in the root directory of the Git repository will not be managed.
+
+In the following cases, all the files "foo.txt" will not be managed.
 
 <pre>
 foo.txt
-</pre>
+</ pre>
 
-ワイルドカードを利用することができるので、ログだけを管理しないということができます。
-
-<pre>
-*.log
-</pre>
-
-<h4>管理を外したものの中で、再び管理する</h4>
-
-管理を外したものの中で、再び管理するには「!」を使います。これ、どこで使うの?
-
-<h4>ディレクトリを管理する</h4>
-
-.gitignoreを書いて、必ずつまづくのは、ディレクトリだけを管理できないということです。これはGitの仕様です。
-
-ディレクトリを管理したい場合は、ディレクトリの中にまず「.gitkeep」というファイルを作成します。これは慣習的な名前で、推奨される名前です。
-
-fooというディレクトリを管理したい場合は「foo」ディレクトリの中に「.gitkeep」を作成します。
-
-そして、ワイルドカードを使って、まずfooディレクトリの中にあるファイルすべてを、管理しないという記述を行います。
+You can use wildcards, so you can say that you don't just manage the logs.
 
 <pre>
-foo/*
-</pre>
+* .log
+</ pre>
 
-.gitkeepも管理を外れているので、「!」を使って、再び管理するという記述を行います。
+<h4> Manage again in the one that was removed </ h4>
+
+Use "!" To manage again among the unmanaged ones. Where do you use this?
+
+<h4> Manage directories </ h4>
+
+The only stumbling block to writing .gitignore is that you can't just manage directories. This is a Git specification.
+
+If you want to manage a directory, first create a file called ".gitkeep" in the directory. This is a customary name and is the recommended name.
+
+If you want to manage a directory called foo, create ".gitkeep" in the "foo" directory.
+
+Then use wildcards to state that you don't manage all the files in the foo directory first.
 
 <pre>
-!foo/.gitkeep
-</pre>
+foo / *
+</ pre>
 
-まとめて書くと以下になります。
+Since .gitkeep is also out of control, use "!" To describe that it will be managed again.
 
 <pre>
-foo/*
-!foo/.gitkeep
-</pre>
+! foo / .gitkeep
+</ pre>
 
-これで、fooディレクトリをGitリポジトリで管理できます。
+The following is a summary.
+
+<pre>
+foo / *
+! foo / .gitkeep
+</ pre>
+
+Now you can manage your foo directory in your Git repository.

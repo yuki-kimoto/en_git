@@ -1,54 +1,54 @@
-<div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
+        <span itemprop = "name"> Git </ span>
       </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <meta itemprop = "position" content = "1" />
+    </ li>
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
+        <span itemprop = "name"> command </ span>
       </a>
-      <meta itemprop="position" content="2" />
-    </li>
+      <meta itemprop = "position" content = "2" />
+    </ li>
     <li>
       here
-    </li>
-  </ul>
-</div>
+    </ li>
+  </ ul>
+</ div>
 
-<h2>git commit - コミットする</h2>
+<h2> git commit --commit </ h2>
 
-コミット準備されたファイルをコミットするには「git commit」コマンドを使用しますコメントを直接入力する場合は「-m」オプションを使用します。
+Use the "git commit" command to commit the prepared file Use the "-m" option to enter the comment directly.
 
 <pre>
-# コメントを直接入力してコミット
-git commit -m "コメント"
+#Enter a comment directly to commit
+git commit -m "comment"
 
-# コメントをviなどのエディタで開いて記述してからコミット
+#Open the comment in an editor such as vi, write it, and then commit
 git commit
-</pre>
+</ pre>
 
-コミットコメントは、ソースコードの変更の内容を記述します。
+Commit comments describe the content of source code changes.
 
-コミットする前に、コミット準備が行われている必要があります。コミット準備を行うには「<a href="/blog/20201112094521.html">git add</a>」コマンドを使用します。
+Before you can commit, you need to be ready to commit. Use the "<a href="/blog/20201112094521.html"> git add </a>" command to prepare for commit.
 
-<a href="https://en.linux.perlzemi.com/blog/20190401171737.html">viエディタ</a>で開いた場合はコメントを書いて「Esc」でコマンドモードにして「wq」と入力してEnterを押します。
+If you open it with <a href="https://en.linux.perlzemi.com/blog/20190401171737.html"> vi editor </a>, write a comment and use "Esc" to switch to command mode and "wq". And press Enter.
 
-<h3>Gitにおけるコミットとは何ですか?</h3>
+<h3> What is a commit in Git? </ h3>
 
-Gitにおけるコミットとは、ある時点におけるファイルとディレクトリの状態のことです。これは40桁のコミットIDによって識別されます。
+A commit in Git is the state of a file and directory at some point in time. It is identified by a 40-digit commit ID.
 
 <pre>
-# コミットID
+#Commit ID
 6b984517092ca6dd61faa7938c136aa468ba6c44
-</pre>
+</ pre>
 
-コミットIDがわかれば、ファイルとディレクトリを、その状態まで、戻すことができます。
+Once you know the commit ID, you can revert the files and directories back to that state.
 
-Gitは、個々のコミット間のファイルとディレクトリの差分の情報を持っており、それを最初のコミットから積み上げることで、ある時点におけるファイルとディレクトリの状態を復元します。
+Git has information about the differences between files and directories between individual commits, and by stacking them from the first commit, it restores the state of the files and directories at some point in time.
 
-<h3>コミットIDは衝突しないのですか?</h3>
+<h3> Does the commit ID conflict? </ H3>
 
-コミットIDはSHA1ハッシュ関数の値なので、衝突することはありえますが、天文学的に小さい確率なので、実用上は大丈夫ということなのでしょう。もしたとえ、ぶつかったとしても、ソースコードにわずかな変更「空白追加」などで回避できるはずです。
+Since the commit ID is the value of the SHA1 hash function, it is possible to collide, but since it is an astronomically small probability, it is probably okay for practical use. Even if it hits, you should be able to avoid it by making a slight change to the source code, such as "adding a blank".

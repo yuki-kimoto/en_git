@@ -1,104 +1,104 @@
-<div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
+        <span itemprop = "name"> Git </ span>
       </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <meta itemprop = "position" content = "1" />
+    </ li>
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
+        <span itemprop = "name"> command </ span>
       </a>
-      <meta itemprop="position" content="2" />
-    </li>
+      <meta itemprop = "position" content = "2" />
+    </ li>
     <li>
       here
-    </li>
-  </ul>
-</div>
+    </ li>
+  </ ul>
+</ div>
 
-<h2>git merge - マージする</h2>
+<h2> git merge --merge </ h2>
 
-「git merge」コマンドでマージができます。git mergeの引数はコミットIDですが、<a href="/blog/20201220091244.html">ブランチ</a>はコミットIDに名前を付けたもので、日常の用途においては、ブランチ名を指定してマージを行います。マージ先は、現在のカレントブランチです。
-
-<pre>
-git merge ブランチ名
-</pre>
-
-<h3>マージって何?</h3>
-
-マージとは、ソースコードに加えられた変更を、取り込むことをいいます。
-
-たとえば私の現在のmainブランチに「a.txt」というファイルがあったとします。
-
-<b>わたしの現在のmainブランチの「a.txt」の内容</b>
+You can merge with the "git merge" command. The argument of git merge is the commit ID, but <a href="/blog/20201220091244.html"> branch </a> is the name of the commit ID, and for everyday use, specify the branch name. And merge. The merge destination is the current current branch.
 
 <pre>
-foo
-bar
-</pre>
+git merge branch name
+</ pre>
 
-マシュマロさんが「main」ブランチから派生させた「masu_fix_bug」というブランチで、作業を行い、コミットをしていったとしましょう。そして「a.txt」は次のようになりました。
+<h3> What is a merge? </ h3>
 
-<b>マシュマロさんの「masu_fix_bug」ブランチの「a.txt」の内容</b>
+Merging is the incorporation of changes made to the source code.
+
+For example, suppose you have a file called "a.txt" in my current main branch.
+
+<b> Contents of "a.txt" in my current main branch </ b>
 
 <pre>
 foo
-bar
+bar bar
+</ pre>
+
+Let's say Marshmallow worked and committed in a branch called "masu_fix_bug" that was derived from the "main" branch. And "a.txt" became as follows.
+
+<b> Contents of "a.txt" in Marshmallow's "masu_fix_bug" branch </ b>
+
+<pre>
+foo
+bar bar
 baz
-</pre>
+</ pre>
 
-私は「main」ブランチにマシュマロさんの「masu_fix_bug」の内容を取り込みたい。
+I want to include the contents of Marshmallow's "masu_fix_bug" in the "main" branch.
 
-このような場合に、差分を解析して、取り込んでくれるのが、マージという機能です。差分は「<a href="/blog/20210805092910.html">git diff</a>」コマンドで確認することができます。
-
-<pre>
-git diff マージしたいブランチ名
-</pre>
-
-<h3>マージのアルゴリズム</h3>
-
-マージには、適用されるアルゴリズムが複数あります。
-
-<h4>ファストフォワードマージ</h4>
-
-一番単純なマージのアルゴリズムです。コミットを単純に進めることで、マージが可能な場合は、これが選択されます。
-
-<h4>ノンファストフォワードマージ</h4>
-
-二つのブランチの共通の祖先の位置からのそれぞれの差分をマージします。マージが衝突する場合があります。
-
-ここで、びっくりするのは、マージするときに、<a href="https://en.linux.perlzemi.com/blog/20190401171737.html">vi</a>などのコマンドラインエディタが立ち上がることです。
-
-何も問題がなければ「ESC」でコマンドモードにして「wq」「Enter」(保存して終了)と押して、マージを完了させましょう。
-
-<h3>マージの衝突の解決</h3>
-
-マージが衝突した場合は、衝突を解決する必要があります。ぶつかった場合は、ソースコードの中に、以下のように表示されます。私はパスを「/foo」に変え、マシュマロさんはテキストを「Good bye」に変えてしまったので、衝突してしまいました。
+In such a case, the function called merging analyzes the difference and captures it. You can check the difference with the "<a href="/blog/20210805092910.html"> git diff </a>" command.
 
 <pre>
-コードほにゃ前
+git diff The name of the branch you want to merge
+</ pre>
 
-<<<<<<< HEAD
-<a href="/foo">Hello</a>
+<h3> Merge algorithm </ h3>
+
+There are multiple algorithms applied to merging.
+
+<h4> Fast forward merge </ h4>
+
+The simplest merge algorithm. If a merge is possible by simply proceeding with the commit, this will be selected.
+
+<h4> Non-fast forward merge </ h4>
+
+Merges the differences from the positions of the common ancestors of the two branches. Marges may conflict.
+
+What surprises me here is that when merging, a command line editor such as <a href="https://en.linux.perlzemi.com/blog/20190401171737.html"> vi </a> is launched. am.
+
+If there are no problems, switch to command mode with "ESC" and press "wq" "Enter" (save and exit) to complete the merge.
+
+<h3> Resolving merge conflicts </ h3>
+
+If the merge conflicts, you need to resolve the conflict. In case of collision, the following will be displayed in the source code. I changed the path to "/ foo" and Marshmallow changed the text to "Good bye", so it clashed.
+
+<pre>
+Before the code
+
+<<<<<<<< HEAD
+<a href="/foo"> Hello </a>
 =======
-<a href="/bar">Good bye</a>
+<a href="/bar"> Good bye </a>
 >>>>>>> masu_fix_bug
 
-コードほにゃ後ろ
-</pre>
+Behind the code
+</ pre>
 
-この部分は、どうあるべきなのかを、考えて、手動で修正する必要があります。修正の例です。
+You need to think about what this part should be and fix it manually. Here is an example of a fix.
 
 <pre>
-コードほにゃ前
+Before the code
 
-<a href="/foo">Good bye</a>
+<a href="/foo"> Good bye </a>
 
-コードほにゃ後ろ
-</pre>
+Behind the code
+</ pre>
 
-これで、二人の変更内容が正しく反映された内容ができました。
+Now you have a content that correctly reflects the changes made by the two.
 
-後は<a href="/blog/20201112094521.html">git add</a>コマンドで「git add .」して、<a href="/blog/20201113141302.html">git commit</a>コマンドで、コミットをする通常のコミット手順を行うだけです。
+After that, use the <a href="/blog/20201112094521.html"> git add </a> command to "git add." And <a href="/blog/20201113141302.html"> git commit </a>. All you have to do with the command is the normal commit procedure to commit.

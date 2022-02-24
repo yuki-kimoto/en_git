@@ -1,42 +1,42 @@
-<div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
+        <span itemprop = "name"> Git </ span>
       </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <meta itemprop = "position" content = "1" />
+    </ li>
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop="name">入門</span>
+        <span itemprop = "name"> Introduction </ span>
       </a>
-      <meta itemprop="position" content="2" />
-    </li>
+      <meta itemprop = "position" content = "2" />
+    </ li>
     <li>
       here
-    </li>
-  </ul>
-</div>
+    </ li>
+  </ ul>
+</ div>
 
-<h2>メールアドレスと名前の登録</h2>
+<h2> Email address and name registration </ h2>
 
-個人の識別情報としてGitに、メールアドレスと名前を登録しましょう。これは、コミットするときの個人の識別情報として利用されます。
+Register your email address and name in Git as personal identification information. This is used as personal identification information when committing.
 
 <pre>
-# 名前の設定
+# Name setting
 git config --global user.name "John Doe"
 
-# メールアドレスの設定
+# Email address settings
 git config --global user.email johndoe@example.com
-</pre>
+</ pre>
 
-この設定内容は「~/.gitconfig」に保存されます。<a href="https://en.linux.perlzemi.com/blog/20200113083613.html">catコマンド</a>で内容を見てみましょう。
+This setting is saved in "~ / .gitconfig". Let's take a look at the contents with the <a href="https://en.linux.perlzemi.com/blog/20200113083613.html"> cat command </a>.
 
 <pre>
-cat ~/.gitconfig
-</pre>
+cat ~ / .gitconfig
+</ pre>
 
-出力したサンプルです。
+This is the output sample.
 
 <pre>
 [user]
@@ -44,4 +44,4 @@ cat ~/.gitconfig
         name = Yuki Kimoto
 [core]
         editor = vi
-</pre>
+</ pre>

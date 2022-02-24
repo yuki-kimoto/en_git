@@ -1,93 +1,93 @@
-<div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
+        <span itemprop = "name"> Git </ span>
       </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <meta itemprop = "position" content = "1" />
+    </ li>
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/github.html">
-        <span itemprop="name">Githubとの連携</span>
+        <span itemprop = "name"> Cooperation with Github </ span>
       </a>
-      <meta itemprop="position" content="2" />
-    </li>
+      <meta itemprop = "position" content = "2" />
+    </ li>
     <li>
       here
-    </li>
-  </ul>
-</div>
+    </ li>
+  </ ul>
+</ div>
 
-<h2>GithubのWikiの編集</h2>
+<h2> Editing the Github Wiki </ h2>
 
-GithubのWikiを編集してみましょう。右上の「Edit」をクリックします。
+Let's edit the Wiki on Github. Click "Edit" in the upper right.
 
-<img src="/images/github/github_wiki_edit_button.png" style="width:100%">
+<img src = "/ images / github / github_wiki_edit_button.png" style = "width: 100%">
 
-Wikiのコンテンツの編集方法や、保存方法は、<a href="/blog/20200618094326.html">GithubのWikiの新規作成</a>で解説したものと同じです。
+The method of editing and saving the contents of the Wiki is the same as that explained in <a href="/blog/20200618094326.html"> Creating a new Wiki on Github </a>.
 
-<h3>Wikiの書き方 - マークダウン記法の基礎</h3>
+<h3> How to write a Wiki-Basics of Markdown Notation </ h3>
 
-Wikiを書く場合にマークダウン記法を使いますが、書き方をいくつか覚えておきましょう。
+I use Markdown notation when writing a Wiki, but let's remember a few ways to write it.
 
-<h4>見出し</h4>
+<h4> Heading </ h4>
 
-見出しは以下です。
-
-<pre>
-# 見出し1
-## 見出し2
-### 見出し3
-</pre>
-
-<h4>コード</h4>
-
-コード。
+The headings are below.
 
 <pre>
-```
+#Heading 1
+## Heading 2
+### Heading 3
+</ pre>
+
+<h4> Code </ h4>
+
+code.
+
+<pre>
+`` ```
 use strict;
 use warnings;
-```
-</pre>
+`` ```
+</ pre>
 
-<h4>リスト</h4>
+<h4> List </ h4>
 
-リスト。
-
-<pre>
-* 項目1
-* 項目2
-* 項目3
-</pre>
-
-<h4>テーブル</h4>
-
-テーブル。
+list.
 
 <pre>
-|  TH  |  TH  |
+* Item 1
+* Item 2
+* Item 3
+</ pre>
+
+<h4> Table </ h4>
+
+table.
+
+<pre>
+| TH | TH |
 | ---- | ---- |
-|  TD  |  TD  |
-|  TD  |  TD  |
-</pre>
+| TD | TD |
+| TD | TD |
+</ pre>
 
-<h4>リンク</h4>
+<h4> link </ h4>
 
-ページリンク。Wikiに存在しないページ名の場合は、リンクが赤くなり、ページの新規作成ページにリンクされます。
-
-<pre>
-[[ページ名]]
-</pre>
-
-ページ名と異なるタイトルをつける場合。
+Page link. If the page name does not exist in the Wiki, the link will turn red and link to the newly created page.
 
 <pre>
-[[環境構築手順書|20200618102400]]
-</pre>
+[[Page Name]]
+</ pre>
 
-外部リンク。
+If you want to give a title different from the page name.
 
 <pre>
-[[Perlクラブ|https://perlclub.net/]]
-</pre>
+[[Environment construction procedure manual | 20200618102400]]
+</ pre>
+
+External link.
+
+<pre>
+[[Perl Club | https://perlclub.net/]]
+</ pre>

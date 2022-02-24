@@ -1,51 +1,51 @@
-<div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
+        <span itemprop = "name"> Git </ span>
       </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <meta itemprop = "position" content = "1" />
+    </ li>
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
+        <span itemprop = "name"> command </ span>
       </a>
-      <meta itemprop="position" content="2" />
-    </li>
+      <meta itemprop = "position" content = "2" />
+    </ li>
     <li>
       here
-    </li>
-  </ul>
-</div>
+    </ li>
+  </ ul>
+</ div>
 
-<h2>git push - ローカルリポジトリの内容をリモートリポジトリに転送</h2>
+<h2> git push --transfer the contents of the local repository to the remote repository </ h2>
 
-git pushコマンドを使うと、ローカルリポジトリの内容をリモートリポジトリに転送し、ブランチの先頭位置を更新できます。
+You can use the git push command to transfer the contents of the local repository to the remote repository and update the beginning of the branch.
 
 <pre>
-# ローカルリポジトリの内容をリモートリポジトリに転送し
-# リモートリポジトリのmainブランチの位置を更新
+# Transfer the contents of the local repository to the remote repository
+#Update the location of the main branch of the remote repository
 git push origin main
-</pre>
+</ pre>
 
-<h3>タグをリモートリポジトリに追加するには</h3>
+<h3> To add a tag to a remote repository </ h3>
 
-タグをリモートリポジトリに転送するには、ブランチ名の代わりに、タグ名を指定します。
+To transfer the tag to a remote repository, specify the tag name instead of the branch name.
 
 <pre>
-git push origin タグ名
-</pre>
+git push origin tag name
+</ pre>
 
-<h3>すべてのタグをリモートリポジトリに追加する</h3>
+<h3> Add all tags to remote repository </ h3>
 
-すべてのタグをリモートリポジトリに追加したい場合は「--tags」を引数に指定します。
+If you want to add all tags to the remote repository, specify "--tags" as an argument.
 
 <pre>
 git push origin --tags
-</pre>
+</ pre>
 
-<h3>ブランチ名を明示的にしていするのが良いの?</h3>
+<h3> Is it better to make the branch name explicit? </ H3>
 
-はい。ブランチ名を明示的に指定するのが良いです。引数を省略した場合はGit 2.0より前のバージョンでは、すべてのブランチの先頭位置を更新してしまうからです。
+Yes. It's a good idea to explicitly specify the branch name. If you omit the argument, versions prior to Git 2.0 will update the beginning of every branch.
 
-Git 2が、広くインストールされるようになるまでは、ブランチ名を明示的に指定しましょう。
+Let's explicitly specify the branch name until Git 2 is widely installed.

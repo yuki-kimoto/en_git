@@ -1,32 +1,32 @@
-<div class="bread">
-  <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<div class = "bread">
+  <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop="name">Git</span>
+        <span itemprop = "name"> Git </ span>
       </a>
-      <meta itemprop="position" content="1" />
-    </li>
-    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <meta itemprop = "position" content = "1" />
+    </ li>
+    <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop="name">コマンド</span>
+        <span itemprop = "name"> command </ span>
       </a>
-      <meta itemprop="position" content="2" />
-    </li>
+      <meta itemprop = "position" content = "2" />
+    </ li>
     <li>
       here
-    </li>
-  </ul>
-</div>
+    </ li>
+  </ ul>
+</ div>
 
-<h2>git pull - リモートリポジトリの内容をローカルリポジトリに転送してマージ</h2>
+<h2> git pull --Transfer and merge the contents of the remote repository to the local repository </ h2>
 
-git pullコマンドを使うと、リモートリポジトリの内容をローカルリポジトリに転送し、カレントブランチに、指定したリモートブランチをマージすることができます。
+You can use the git pull command to transfer the contents of a remote repository to your local repository and merge the specified remote branch into your current branch.
 
-以下は、リモートリポジトリ「origin」とリモートブランチ「main」を指定して、カレントブランチに、マージします。
+The following merges into the current branch, specifying the remote repository "origin" and the remote branch "main".
 
 <pre>
-# リモートリポジトリの内容をローカルリポジトリに転送してマージ
+# Transfer the contents of the remote repository to the local repository and merge
 git pull origin main
-</pre>
+</ pre>
 
-git pullコマンドは、フェッチ「<a href="/blog/20210809142256.html">git fetch</a>」とマージ「<a href="/blog/20210819082837.html">git merge</a>」を一度に行うコマンドです。
+The git pull command merges with fetch "<a href="/blog/20210809142256.html"> git fetch </a>" "<a href="/blog/20210819082837.html"> git merge </a>" Is a command to execute at once.
