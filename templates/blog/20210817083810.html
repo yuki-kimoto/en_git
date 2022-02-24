@@ -2,41 +2,41 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git revert --commit with undo changes </ h2>
+<h2> git revert --commit with undo changes </h2>
 
 You can use the "git revert" command to commit the specified commit with the undo changes.
 
 <pre>
 git revert commit id
-</ pre>
+</pre>
 
-<h3> When do you use git revert? </ h3>
+<h3> When do you use git revert? </h3>
 
 Git has a history of commits, and you may want to keep that history and undo past changes.
 
 In such cases, you can use the "git revert" command to commit with changes that undo past changes.
 
-<h3> You can get more git revert back </ h3>
+<h3> You can get more git revert back </h3>
 
 Yes You can revert the revert by specifying the "git revert" commit ID.
 
-<h3> What to do if there are multiple consecutive changes? </ H3>
+<h3> What to do if there are multiple consecutive changes? </H3>
 
 Find out the commit ID and run "git revert" multiple times, from newest to oldest. It's a hassle, but when you need to do it, you have to do it.
 
@@ -44,6 +44,6 @@ Find out the commit ID and run "git revert" multiple times, from newest to oldes
 git revert commit 3
 git revert commit 2
 git revert commit 1
-</ pre>
+</pre>
 
-It's a mistake-prone procedure, so it's safe to create a branch with the "<a href="/blog/20201220091244.html"> git branch </a>" command instead of doing it in the master branch.
+It's a mistake-prone procedure, so it's safe to create a branch with the "<a href="/blog/20201220091244.html"> git branch</a>" command instead of doing it in the master branch.

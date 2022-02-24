@@ -2,30 +2,30 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git log --View the contents of the commit log </ h2>
+<h2> git log --View the contents of the commit log </h2>
 
 Use the "git log" command to see the contents of the commit log.
 
 <pre>
 # View the contents of the commit log
 git log
-</ pre>
+</pre>
 
 The commit log is displayed. You can see the commit ID, author, commit date, and commit message.
 
@@ -47,29 +47,29 @@ Author: Yuki Kimoto <kimoto.yuki@gmail.com>
 Date: Fri Oct 16 07:53:39 2020 +0900
 
     add type check compiler error tests
-</ pre>
+</pre>
 
-<h3> Advance the commit log down </ h3>
+<h3> Advance the commit log down </h3>
 
 Use the "Space" key to move the commit log down.
 
 You can read down, down.
 
-<h3> End the display of the commit log </ h3>
+<h3> End the display of the commit log </h3>
 
 To finish viewing the commit log, type q and press Enter.
 
-<h3> Search the commit log </ h3>
+<h3> Search the commit log </h3>
 
 Use the "--grep" option to search the commit log for commit messages. Enter the character string you want to search for in the character string.
 
 <pre>
 git log --grep string
-</ pre>
+</pre>
 
 You can retrieve the commit log that matches your search.
 
-<h4> I want to know the commit ID immediately before the matched commit ID </ h4>
+<h4> I want to know the commit ID immediately before the matched commit ID </h4>
 
 Sometimes you want to know the commit ID just before the matched commit ID.
 
@@ -79,24 +79,24 @@ Let's say the commit IDs that match your search are:
 
 <pre>
 be401600433693794eecbc65ed4b9e787902ed9a
-</ pre>
+</pre>
 
 Let's say you want to see the difference from the previous one. Using the notation "commit ID ^", do the following:
 
 <pre>
 git diff be401600433693794eecbc65ed4b9e787902ed9a ^ be401600433693794eecbc65ed4b9e787902ed9a
-</ pre>
+</pre>
 
-<h3> When do you use git log? </ h3>
+<h3> When do you use git log? </h3>
 
 I will introduce the scene where git log is used.
 
-If you want to check after committing with <a href="/blog/20201113141302.html"> git commit </a>.
+If you want to check after committing with <a href="/blog/20201113141302.html"> git commit</a>.
 
-If you want to check what kind of branch the branch created by <a href="/blog/20201220091244.html"> git branch </a> is, you want to use git log to start the commit.
+If you want to check what kind of branch the branch created by <a href="/blog/20201220091244.html"> git branch</a> is, you want to use git log to start the commit.
 
-I want to see the beginning of the commit with git log even when switching branches with <a href="/blog/20201222100951.html"> git checkout </a>.
+I want to see the beginning of the commit with git log even when switching branches with <a href="/blog/20201222100951.html"> git checkout</a>.
 
-You can also use <a href="/blog/20210806133244.html"> git reset </a> to check the commit ID when returning a commit to a certain state.
+You can also use <a href="/blog/20210806133244.html"> git reset</a> to check the commit ID when returning a commit to a certain state.
 
 In addition, if you want to check the commit ID, use it each time.

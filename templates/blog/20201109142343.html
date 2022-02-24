@@ -2,46 +2,46 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git init --Initialize Git repository </ h2>
+<h2> git init --Initialize Git repository </h2>
 
 Use the "git init" command to initialize the Git repository.
 
 <pre>
 git init
-</ pre>
+</pre>
 
-This is a sample to initialize a directory called perlzemi as a Git repository. Use the <a href="https://en.linux.perlzemi.com/blog/20191012191854.html"> cd command </a> to change to the "perlzemi" directory and then run the "git init" command.
+This is a sample to initialize a directory called perlzemi as a Git repository. Use the <a href="https://en.linux.perlzemi.com/blog/20191012191854.html"> cd command</a> to change to the "perlzemi" directory and then run the "git init" command.
 
 <pre>
 cd perlzemi
 git init
-</ pre>
+</pre>
 
 Initialization will create a directory called ".git".
 
 <pre>
 .git
-</ pre>
+</pre>
 
 The ".git" directory stores Git settings for this repository and Git commit information.
 
-<h3> Create a raw Git repository that is not a working directory </ h3>
+<h3> Create a raw Git repository that is not a working directory </h3>
 
 To create a raw Git repository without a working directory, use the "--bare" option of "git init".
 
@@ -51,4 +51,4 @@ I don't think you need to create a raw Git repository (only the directory that c
 mkdir foo.git
 cd foo.git
 git init --bare
-</ pre>
+</pre>

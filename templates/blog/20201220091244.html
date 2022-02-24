@@ -2,34 +2,34 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git branch --List branch / Create branch </ h2>
+<h2> git branch --List branch / Create branch </h2>
 
 Use the "git branch" command to list branches and create branches.
 
-<h3> List branches </ h3>
+<h3> List branches </h3>
 
 To list the branches, use the "git branch" command with no arguments.
 
 <pre>
 #Branch list
 git branch
-</ pre>
+</pre>
 
 A list of branches is displayed. The current branch name is marked with an "*".
 
@@ -37,18 +37,18 @@ A list of branches is displayed. The current branch name is marked with an "*".
 * blead
   fix_bug
   v2_release
-</ pre>
+</pre>
 
-<h3> Create a branch </ h3>
+<h3> Create a branch </h3>
 
 To create a branch, specify the branch name with the "git branch" command.
 
 <pre>
 #Create a branch
 git branch branch name
-</ pre>
+</pre>
 
-<h3> Branch name </ h3>
+<h3> Branch name </h3>
 
 We recommend that you give your branch a concise name that will help you understand your development work.
 
@@ -56,13 +56,13 @@ An example for a development branch to add a product modification feature.
 
 <pre>
 git branch goods_update
-</ pre>
+</pre>
 
 The point is that it can be distinguished from other branches and is easy to understand.
 
 For large projects, it may be a little longer, such as with the worker's name.
 
-<h3> What is a branch? </ h3>
+<h3> What is a branch? </h3>
 
 A branch is a feature that allows you to branch your development. For example, it is used for "adding new features", "fixing bugs", "maintenance for version 2", and so on. Think of blead here as "bread leading" in the main branch.
 
@@ -72,7 +72,7 @@ o --o --o --o --o --o --o blead
         | --o --o fix_bug
         |
         --o --o --o --o v2
-</ pre>
+</pre>
 
 As an internal implementation, a branch in Git is simply a reference to the beginning of a commit. Branching a commit is the creation of a branch, and the beginning of the branch where the commit branches and extends is the branch.
 
@@ -84,9 +84,9 @@ Immediately after executing "git branch", it looks like this.
 Immediately after # git branch
 o --o --o <-blead
            <-fix_bug
-</ pre>
+</pre>
 
-The branch is never copied, just the commit ID at the beginning of the extended o is named fix_bug. This means reference. <a href="https://perlzemi.com/blog/20180214151861.html"> Perl Reference </a> and <a href="https://en.c.perlzemi.com/"> C language < If you understand the pointer of / a>, it will be relatively easy to understand.
+The branch is never copied, just the commit ID at the beginning of the extended o is named fix_bug. This means reference. <a href="https://perlzemi.com/blog/20180214151861.html"> Perl Reference</a> and <a href="https://en.c.perlzemi.com/"> C language < If you understand the pointer of / a>, it will be relatively easy to understand.
 
 Let's proceed with one commit in the fix_bug branch. It will be as follows.
 
@@ -96,15 +96,15 @@ Proceed with commit with # fix_bug
 o --o --o <-blead
         |
         --o <-fix_bug
-</ pre>
+</pre>
 
-<h3> Create a branch based on other commits, branches or tags </ h3>
+<h3> Create a branch based on other commits, branches or tags </h3>
 
 You can also create a branch based on other commit IDs, branches, or tags. The branch can be a remote branch or a local branch. A remote branch simply means a branch in a remote repository.
 
 <pre>
 git branch branch name, branch name, etc.
-</ pre>
+</pre>
 
 This is a sample to create a branch based on other commits, branches and tags.
 
@@ -120,4 +120,4 @@ git branch new_branch origin / fix_bug
 
 Based on the # tag
 git branch new_branch v2.1
-</ pre>
+</pre>

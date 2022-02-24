@@ -2,26 +2,26 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop = "name"> Introduction </ span>
-      </a>
+        <span itemprop = "name"> Introduction </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> Push a branch to a remote repository </ h2>
+<h2> Push a branch to a remote repository </h2>
 
-Learn how to push a branch to a remote repository. It is assumed that <a href="/blog/20210729082405.html"> commit is complete </a>.
-<h3> What is a remote repository </ h3>
+Learn how to push a branch to a remote repository. It is assumed that <a href="/blog/20210729082405.html"> commit is complete</a>.
+<h3> What is a remote repository </h3>
 
 A remote repository is a remote repository. For example, a repository on Github.
 
@@ -30,17 +30,17 @@ Remote repositories can be represented using URLs.
 <pre>
 #Represent remote repository with URL
 git@github.com:yuki-kimoto/perlzemigit.git
-</ pre>
+</pre>
 
 However, this is a hassle to remember, so most of the time you give it a name. Use the "git remote add" command to name it.
 
 <pre>
 git remote add origin git@github.com:yuki-kimoto/perlzemigit.git
-</ pre>
+</pre>
 
 It is customary to name the default remote branch origin.
 
-<h3> What is a branch? </ H3>
+<h3> What is a branch? </H3>
 
 I will explain about the branch of Git. A Git branch is a reference to a commit. Each commit is represented by a commit ID, but the first part where the commit ID extends is the branch.
 
@@ -50,11 +50,11 @@ I will explain about the branch of Git. A Git branch is a reference to a commit.
   |
   -*-*
         add_api
-</ pre>
+</pre>
 
 In Git, the default branch name is master. For users who imagine master as a slavery master, the new version of Git allows you to optionally give it a default branch name.
 
-<h3> Local and remote repositories </ h3>
+<h3> Local and remote repositories </h3>
 
 In Git, both local and remote repositories had complete information about the entire file.
 
@@ -68,21 +68,21 @@ Suppose your local repository is in the following state:
 <pre>
             main
 *-*-*-*
-</ pre>
+</pre>
 
 Suppose the remote repository "origin" is in the following state.
 
 <pre>
         main
 *-*-*
-</ pre>
+</pre>
 
 Pushing means transferring a new commit from your local repository to a remote repository and aligning your branches.
 
-<h3> Push </ h3>
+<h3> Push </h3>
 
-Use the "<a href="/blog/20210812084715.html"> git push </a>" command to push. The arguments are the remote repository name and branch name.
+Use the "<a href="/blog/20210812084715.html"> git push</a>" command to push. The arguments are the remote repository name and branch name.
 
 <pre>
 git push origin main
-</ pre>
+</pre>

@@ -2,23 +2,23 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git commit --commit </ h2>
+<h2> git commit --commit </h2>
 
 Use the "git commit" command to commit the prepared file Use the "-m" option to enter the comment directly.
 
@@ -28,27 +28,27 @@ git commit -m "comment"
 
 #Open the comment in an editor such as vi, write it, and then commit
 git commit
-</ pre>
+</pre>
 
 Commit comments describe the content of source code changes.
 
-Before you can commit, you need to be ready to commit. Use the "<a href="/blog/20201112094521.html"> git add </a>" command to prepare for commit.
+Before you can commit, you need to be ready to commit. Use the "<a href="/blog/20201112094521.html"> git add</a>" command to prepare for commit.
 
-If you open it with <a href="https://en.linux.perlzemi.com/blog/20190401171737.html"> vi editor </a>, write a comment and use "Esc" to switch to command mode and "wq". And press Enter.
+If you open it with <a href="https://en.linux.perlzemi.com/blog/20190401171737.html"> vi editor</a>, write a comment and use "Esc" to switch to command mode and "wq". And press Enter.
 
-<h3> What is a commit in Git? </ h3>
+<h3> What is a commit in Git? </h3>
 
 A commit in Git is the state of a file and directory at some point in time. It is identified by a 40-digit commit ID.
 
 <pre>
 #Commit ID
 6b984517092ca6dd61faa7938c136aa468ba6c44
-</ pre>
+</pre>
 
 Once you know the commit ID, you can revert the files and directories back to that state.
 
 Git has information about the differences between files and directories between individual commits, and by stacking them from the first commit, it restores the state of the files and directories at some point in time.
 
-<h3> Does the commit ID conflict? </ H3>
+<h3> Does the commit ID conflict? </H3>
 
 Since the commit ID is the value of the SHA1 hash function, it is possible to collide, but since it is an astronomically small probability, it is probably okay for practical use. Even if it hits, you should be able to avoid it by making a slight change to the source code, such as "adding a blank".

@@ -2,33 +2,33 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop = "name"> Introduction </ span>
-      </a>
+        <span itemprop = "name"> Introduction </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> Set files not managed by Git --.gitignore </ h2>
+<h2> Set files not managed by Git --.gitignore </h2>
 
-Use the ".gitignore" file to set files that are not managed by Git. Create the file with the <a href="https://en.linux.perlzemi.com/blog/20191205081119.html"> touch </a> command. If you write it in ".gitignore", it will not be ready for commit with <a href="/blog/20201112094521.html"> git add command </a>.
+Use the ".gitignore" file to set files that are not managed by Git. Create the file with the <a href="https://en.linux.perlzemi.com/blog/20191205081119.html"> touch</a> command. If you write it in ".gitignore", it will not be ready for commit with <a href="/blog/20201112094521.html"> git add command</a>.
 
 <pre>
 touch .gitignore
-</ pre>
+</pre>
 
 .gitignore can be placed anywhere in the repository, but it is recommended to manage it at the top of the repository.
 
-<h4> Absolute path </ h4>
+<h4> Absolute path </h4>
 
 If you write it with an absolute path, it will be written from the root of the Git repository.
 
@@ -36,15 +36,15 @@ If you write it with an absolute path, it will be written from the root of the G
 
 <pre>
 / foo
-</ pre>
+</pre>
 
 "/ Foo / bar" is no longer managed.
 
 <pre>
 / foo / bar
-</ pre>
+</pre>
 
-<h4> Relative path </ h4>
+<h4> Relative path </h4>
 
 If you write it with a relative path, the files contained somewhere in the root directory of the Git repository will not be managed.
 
@@ -52,19 +52,19 @@ In the following cases, all the files "foo.txt" will not be managed.
 
 <pre>
 foo.txt
-</ pre>
+</pre>
 
 You can use wildcards, so you can say that you don't just manage the logs.
 
 <pre>
 * .log
-</ pre>
+</pre>
 
-<h4> Manage again in the one that was removed </ h4>
+<h4> Manage again in the one that was removed </h4>
 
 Use "!" To manage again among the unmanaged ones. Where do you use this?
 
-<h4> Manage directories </ h4>
+<h4> Manage directories </h4>
 
 The only stumbling block to writing .gitignore is that you can't just manage directories. This is a Git specification.
 
@@ -76,19 +76,19 @@ Then use wildcards to state that you don't manage all the files in the foo direc
 
 <pre>
 foo / *
-</ pre>
+</pre>
 
 Since .gitkeep is also out of control, use "!" To describe that it will be managed again.
 
 <pre>
 ! foo / .gitkeep
-</ pre>
+</pre>
 
 The following is a summary.
 
 <pre>
 foo / *
 ! foo / .gitkeep
-</ pre>
+</pre>
 
 Now you can manage your foo directory in your Git repository.

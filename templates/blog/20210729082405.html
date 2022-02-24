@@ -2,52 +2,52 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop = "name"> Introduction </ span>
-      </a>
+        <span itemprop = "name"> Introduction </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> Make a commit </ h2>
+<h2> Make a commit </h2>
 
-I will explain how to commit with Git. You can commit with the <a href="/blog/20201113141302.html"> git commit </a> command. You need to be <a href="/blog/20210723090147.html"> ready to commit </a>.
+I will explain how to commit with Git. You can commit with the <a href="/blog/20201113141302.html"> git commit</a> command. You need to be <a href="/blog/20210723090147.html"> ready to commit</a>.
 
 To make a commit, you need to enter a comment that outlines the source code changes. Specify with the "-m" option. This comment is called a commit message.
 
 <pre>
 #Enter a comment directly to commit
 git commit -m "comment"
-</ pre>
+</pre>
 
 If you do not use the "-m" option, you can open it in an editor such as vi. This editor can also be set in the Git config file.
 
 <pre>
 You can also open the #comment in an editor such as vi and write it before writing the commit message.
 git commit
-</ pre>
+</pre>
 
-<h3> Confirm commit </ h3>
+<h3> Confirm commit </h3>
 
-Use the <a href="/blog/20201103093112.html"> git log command </a> to confirm the commit.
+Use the <a href="/blog/20201103093112.html"> git log command</a> to confirm the commit.
 
 <pre>
 git log
-</ pre>
+</pre>
 
 This is a sample output of git log. At the top is the new commit. Make sure the commit message you just committed is at the top.
 
 <pre>
-commit 99e77ecbb2fa0922aed2995ebc20eea20b559a87 (HEAD-> main, origin / main)
+commit 99e77ecbb2fa0922aed2995ebc20eea20b559a87 (HEAD->main, origin / main)
 Author: Yuki Kimoto <kimoto.yuki@gmail.com>
 Date: Thu Jul 29 08:58:33 2021 +0900
 
@@ -64,15 +64,15 @@ Author: Yuki Kimoto <kimoto.yuki@gmail.com>
 Date: Tue Jul 27 08:16:09 2021 +0900
 
     Summary of how to create a web browser automated operation robot in Perl
-</ pre>
+</pre>
 
 Note that this is from a personal site, so the commit message is pretty good, but if you're co-developing, write it a little more carefully.
 
-<h3> How to get back the wrong commit? </ h3>
+<h3> How to get back the wrong commit? </h3>
 
 Immediately after committing, I realized that I had committed by mistake. In this case, how can I get the wrong commit back?
 
-Use the "<a href="/blog/20210806133244.html"> git reset </a>" command to revert to the previous commit. Check the previous commit ID. In the above example, it is the following "8166b40288648dab314147df751c2d27788b1d03".
+Use the "<a href="/blog/20210806133244.html"> git reset</a>" command to revert to the previous commit. Check the previous commit ID. In the above example, it is the following "8166b40288648dab314147df751c2d27788b1d03".
 
 <pre>
 commit 8166b40288648dab314147df751c2d27788b1d03
@@ -80,13 +80,13 @@ Author: Yuki Kimoto <kimoto.yuki@gmail.com>
 Date: Wed Jul 28 08:53:01 2021 +0900
 
     Get list of child windows and get desktop window
-</ pre>
+</pre>
 
 Specify this commit ID in the argument of "git reset".
 
 <pre>
 # Revert to the previous commit
 git reset 8166b40288648dab314147df751c2d27788b1d03
-</ pre>
+</pre>
 
 If you make a mistake, don't specify the "--hard" option in the "git reset" command. All the file changes in the working directory are returned and tears come out. If you have a file open in a text editor and the content remains, overwrite it quickly.

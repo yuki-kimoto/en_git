@@ -2,35 +2,35 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop = "name"> Introduction </ span>
-      </a>
+        <span itemprop = "name"> Introduction </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> Easy way to restore deleted files with Git </ h3>
+<h2> Easy way to restore deleted files with Git </h3>
 
 "I deleted that file in the past, but I actually needed it." "I want to modify that deleted program to create a new program." Here's an easy way to recover deleted files in Git.
 
 Git has a history of changes to all files and directories. So all you need to do is know how to revert to the past state and the commit immediately before the one that deleted the file.
 
-<h3> Find the commit ID immediately before the commit that deleted the file </ h3>
+<h3> Find the commit ID immediately before the commit that deleted the file </h3>
 
-You can see past commits with the <a href="/blog/20201103093112.html"> git log </a> command.
+You can see past commits with the <a href="/blog/20201103093112.html"> git log</a> command.
 
 <pre>
 git log
-</ pre>
+</pre>
 
 <pre>
 commit 23cd914d4f7087a01a1d23c66edc98026013102d
@@ -44,7 +44,7 @@ Author: Kimoto Yuki <kimoto.yuki@google.com>
 Date: Wed Nov 25 10:20:34 2020 +0900
 
     Fix header
-</ pre>
+</pre>
 
 If you can find the commit ID "a15a73d ..." before deleting the file immediately, that's OK.
 
@@ -52,7 +52,7 @@ If you erased it a long time ago, it's hard to follow the commit message. In tha
 
 <pre>
 git log --grep remove
-</ pre>
+</pre>
 
 If you put something like "Delete XX" in the commit message, you can search with this.
 
@@ -64,27 +64,27 @@ Author: Kimoto Yuki <kimoto.yuki@google.com>
 Date: Wed Nov 25 10:20:34 2020 +0900
 
     Delete unnecessary XX files
-</ pre>
+</pre>
 
 In Git, the previous commit ID can be expressed by "commit ID ^".
 
 <pre>
 # Commit ID of the previous commit
 23cd914d4f7087a01a1d23c66edc98026013102d ^
-</ pre>
+</pre>
 
-<h3> Create a branch and check out </ h3>
+<h3> Create a branch and check out </h3>
 
-Let's create a new branch with <a href="/blog/20201220091244.html"> git branch </a> from the above commit ID. Here, the name is "old".
+Let's create a new branch with <a href="/blog/20201220091244.html"> git branch</a> from the above commit ID. Here, the name is "old".
 
 <pre>
 git branch old 23cd914d4f7087a01a1d23c66edc98026013102d ^
-</ pre>
+</pre>
 
 Do a git checkout to switch branches.
 
 <pre>
 git checkout old
-</ pre>
+</pre>
 
 Find out if there is an old file and copy it somewhere. Then go back to the original branch.

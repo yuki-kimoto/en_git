@@ -2,59 +2,59 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git diff --Display difference </ h2>
+<h2> git diff --Display difference </h2>
 
 The git diff command is a command to display the difference.
 
 <pre>
 #Display difference
 git diff
-</ pre>
+</pre>
 
 Here is an example of the output of the git diff command.
 
 <pre>
-$ git diff
+$git diff
 diff --git a /README.md b / README.md
 deleted file mode 100644
 index 372dc9d3..00000000
 --- a / README.md
 +++ / dev / null
-@@ -1,5 +0,0 @@
+@@-1,5 +0,0 @@
 diff --git a /README.md b / README.md
 deleted file mode 100644
 index 372dc9d3..00000000
 --- a / README.md
 +++ / dev / null
-@@ -1,5 +0,0 @@
+@@-1,5 +0,0 @@
 -<H1>
 --Introduction to Perl Seminar
--</ h1>
+-</h1>
 ――――
 ――――
 diff --git a / templates / index.html b / templates / index.html
 index 66c755ea..f0b95399 100644
 --- a / templates / index.html
 +++ b / templates / index.html
-@@ -2,7 +2,7 @@
+@@-2,7 +2,7 @@
 
- An introductory course on <b> Perl text processing </ b> and <b> regular expressions </ b>. Perl is a programming language that excels at <b> text processing </ b> and <b> regular expressions </ b> in the fields of <b> Linux server management </ b> and <b> Web system development </ b>. Active in. Perl as the basis for text processing and regular expressions
+ An introductory course on <b> Perl text processing </b> and <b> regular expressions </b>. Perl is a programming language that excels at <b> text processing </b> and <b> regular expressions </b> in the fields of <b> Linux server management </b> and <b> Web system development </b>. Active in. Perl as the basis for text processing and regular expressions
 Explains the logging language from the basics. You can also learn Linux and web development. Hello World!
 
 -Perl is installed on most Linux / Unix and is backwards compatible and stable
@@ -62,66 +62,66 @@ It has a good reputation for being operational.
 + Perl is installed on most Linux / Unix and is backwards compatible and stable
 It has a good reputation for being operational. How nice.
 
- <h4> Introduction to Perl Programming </ h4>
-</ pre>
+ <h4> Introduction to Perl Programming </h4>
+</pre>
 
-The git diff command, with no arguments, displays the difference between the working directory and <a href="/blog/20210723090147.html"> commit ready state </a>. The commit-ready state is the most recent commit if you have not prepared for commit.
+The git diff command, with no arguments, displays the difference between the working directory and <a href="/blog/20210723090147.html"> commit ready state</a>. The commit-ready state is the most recent commit if you have not prepared for commit.
 
 In other words, note that the "git diff" command doesn't show any diffs after you've prepared for a commit.
 
-<h4> Show the difference between the most recent commit and the commit ready state </ h4>
+<h4> Show the difference between the most recent commit and the commit ready state </h4>
 
 To see the difference between the most recent commit and the commit ready state, use the "--cached" option and type "git diff --cached".
 
 <pre>
 # Show the difference between the most recent commit and the commit ready state
 git diff --cached
-</ pre>
+</pre>
 
 Note that you need to use the "--cached" option to see what diffs are actually added to the new commit after you prepare it for commit with "git add.".
 
-<h4> Show diffs between specific commits </ h4>
+<h4> Show diffs between specific commits </h4>
 
 To see the difference between a particular commit, specify two commit IDs as arguments.
 
 <pre>
 git diff commit ID1 commit ID2
-</ pre>
+</pre>
 
-Use the <a href="/blog/20201103093112.html"> git log command </a> to find out the commit ID.
+Use the <a href="/blog/20201103093112.html"> git log command</a> to find out the commit ID.
 
 This is a sample that specifies the commit ID.
 
 <pre>
 git diff 30ce650c40cd05632fc8a992a7bff9d79dbaaa08 016d2063f2ed90d14ba9cea1a7ef1c2f962a003b
-</ pre>
+</pre>
 
-<h4> Show the difference between the current commit and the previous commit </ h4>
+<h4> Show the difference between the current commit and the previous commit </h4>
 
 Let's display the difference between the current commit and the previous commit. The branch called HEAD indicates the beginning of the current branch, and the symbol "^" can be written as follows by using the display of the previous branch.
 
 <pre>
 git diff HEAD ^ HEAD
-</ pre>
+</pre>
 
 Furthermore, you can omit it and write as follows.
 
 <pre>
 git diff HEAD ^
-</ pre>
+</pre>
 
-<h4> Show the difference between a specific commit and the previous commit </ h4>
+<h4> Show the difference between a specific commit and the previous commit </h4>
 
 To see the difference between a particular commit and the previous commit:
 
 <pre>
 git diff 30ce650c40cd05632fc8a992a7bff9d79dbaaa08 ^ 30ce650c40cd05632fc8a992a7bff9d79dbaaa08
-</ pre>
+</pre>
 
-<h4> Show branch diffs </ h4>
+<h4> Show branch diffs </h4>
 
 To see the branch diffs, do the following: If you know that a branch is an alias for commit, you know.
 
 <pre>
 git diff main some_branch
-</ pre>
+</pre>

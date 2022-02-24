@@ -2,33 +2,33 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git reset command-move commit position </ h2>
+<h2> git reset command-move commit position </h2>
 
 The git reset command is a command that moves the commit position of the current branch.
 
 <pre>
 git reset commit ID
-</ pre>
+</pre>
 
 Depending on how you use it, the git reset command will assume that you haven't changed the current working directory, so I'll write about this first.
 
-<h3> --hard option undo all working directory changes </ h3>
+<h3> --hard option undo all working directory changes </h3>
 
 The "--hard" option of the git reset command undoes any changes made to the working directory.
 
@@ -36,31 +36,31 @@ The "--hard" option of the git reset command undoes any changes made to the work
 # Revert all changes made to the working directory
 # Change commit position
 git reset --hard commit ID
-</ pre>
+</pre>
 
 So, when using the git reset command, first think carefully about whether you want to move only the commit position or revert the changes you made to your working directory.
 
-<h3> I want to undo all the changes I made to the working directory </ h3>
+<h3> I want to undo all the changes I made to the working directory </h3>
 
 If you have changed the source code and undoed the changes you made to the working directory, specify the "--hard" option. If the commit ID is omitted, it reverts to the latest commit position.
 
 <pre>
 #I want to undo all the changes I made to the working directory
 git reset --hard
-</ pre>
+</pre>
 
-<h3> I want to keep the changes I made to the working directory and revert to the previous commit </ h3>
+<h3> I want to keep the changes I made to the working directory and revert to the previous commit </h3>
 
 If you accidentally commit, you may want to keep the changes you made to your working directory and revert to your previous commit. In such a case, specify the previous commit ID without specifying the "--hard" option.
 
 <pre>
 #I want to keep the changes I made to the working directory and revert to the previous commit
 git reset Previous commit ID
-</ pre>
+</pre>
 
-<h3> I want to restore a certain state in the past </ h3>
+<h3> I want to restore a certain state in the past </h3>
 
-There are times when you want to return to a certain state in the past, such as wanting to refer to an implementation that was deleted in the past again. In such a case, use the <a href="/blog/20201220091244.html"> git branch </a> command to create a branch for the past, and then use "git reset --hard" to change to the past state. It's safe to put it back.
+There are times when you want to return to a certain state in the past, such as wanting to refer to an implementation that was deleted in the past again. In such a case, use the <a href="/blog/20201220091244.html"> git branch</a> command to create a branch for the past, and then use "git reset --hard" to change to the past state. It's safe to put it back.
 
 <pre>
 #create an old branch
@@ -78,13 +78,13 @@ git branch
 
 #Return to past state
 git reset --hard Commit ID at some point in the past
-</ pre>
+</pre>
 
-The "--grep" option of the <a href="/blog/20201103093112.html"> git log </a> command, which allows you to search for commit messages, is useful for finding where you want to go back.
+The "--grep" option of the <a href="/blog/20201103093112.html"> git log</a> command, which allows you to search for commit messages, is useful for finding where you want to go back.
 
 <pre>
 git log --grep'fix foo'
-</ pre>
+</pre>
 
 If you found the commit ID and want to return to that state, use that commit ID. Also, you may want to go back one step before that. In that case, you can use "^" to express the previous commit.
 
@@ -94,4 +94,4 @@ git reset --hard commit ID
 
 #Revert to just before the found commit ID
 git reset --hard commit ID ^
-</ pre>
+</pre>

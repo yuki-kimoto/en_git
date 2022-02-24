@@ -2,29 +2,29 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git remote --Add / Modify / Delete Remote Repository </ h2>
+<h2> git remote --Add / Modify / Delete Remote Repository </h2>
 
 The git remote command is a command to add / modify / delete a remote repository. To be more precise, it is a command to add / change / delete a simple name that represents a remote repository expressed by a URL.
 
 The following explanation is written in terms of adding / changing / deleting the remote repository for convenience, but the actual content is adding / changing / deleting the simple name that represents the remote repository expressed in the URL. Please be aware of that.
 
-<h3> Add remote repository </ h3>
+<h3> Add remote repository </h3>
 
 Use the "git remote add" command to add a remote repository. The first argument is the name of the remote branch and the second argument is the URL of the remote branch.
 
@@ -33,47 +33,47 @@ The name of the default remote repository is customarily "origin".
 <pre>
 #Add remote repository
 git remote add origin git@github.com:yuki-kimoto/perlzemigit.git
-</ pre>
+</pre>
 
-<h3> Modify remote repository </ h3>
+<h3> Modify remote repository </h3>
 
 Use the "git remote set-url" command to change the URL that the remote repository name points to.
 
 <pre>
 git remote set-url origin git@github.com:yuki-kimoto/ohter.git
-</ pre>
+</pre>
 
-<h3> Delete remote repository </ h3>
+<h3> Delete remote repository </h3>
 
 Use the "git remote remove" command to remove a remote repository.
 
 <pre>
 git remote remove origin
-</ pre>
+</pre>
 
-<h3> Display list of remote repositories </ h3>
+<h3> Display list of remote repositories </h3>
 
 Use "git remote" to see a list of remote repositories.
 
 <pre>
 git remote
-</ pre>
+</pre>
 
 This is a sample output result.
 
 <pre>
 origin
-</ pre>
+</pre>
 
 If you want to know which URL the remote repository points to, use the "-v" option of "git remote".
 
 <pre>
 git remote -v
-</ pre>
+</pre>
 
 This is a sample output result.
 
 <pre>
 origin git@github.com:yuki-kimoto/perlzemigit.git (fetch)
 origin git@github.com:yuki-kimoto/perlzemigit.git (push)
-</ pre>
+</pre>

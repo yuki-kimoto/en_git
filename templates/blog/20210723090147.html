@@ -2,51 +2,51 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop = "name"> Introduction </ span>
-      </a>
+        <span itemprop = "name"> Introduction </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> Prepare for commit </ h2>
+<h2> Prepare for commit </h2>
 
-Git prepares for a commit before it commits. Use the "<a href="/blog/20201112094521.html"> git add </a>" command to prepare for commit.
+Git prepares for a commit before it commits. Use the "<a href="/blog/20201112094521.html"> git add</a>" command to prepare for commit.
 
 <pre>
 # Put one file ready for commit
 git add filename
-</ pre>
+</pre>
 
 Use "git add." To put all the files under the current directory in the commit ready state. Starting with Git 2.0, deleted files will also be ready for commit.
 
 <pre>
 # Put files under the current directory ready for commit
 git add.
-</ pre>
+</pre>
 
-<h3> Check the commit preparation status </ h3>
+<h3> Check the commit preparation status </h3>
 
-Use the "<a href="/blog/20201110105057.html"> git status </a>" command to check the commit readiness.
+Use the "<a href="/blog/20201110105057.html"> git status</a>" command to check the commit readiness.
 
 <pre>
 # Check the commit preparation status
 git status
-</ pre>
+</pre>
 
 Here is a sample output when ready to commit. "Templates / index.html" has been modified and "README.md" has been deleted, and it is ready for commit.
 
 <pre>
-$ git status
+$git status
 On branch master
 Your branch is up to date with'origin / master'.
 
@@ -55,45 +55,45 @@ Changes to be committed:
 
         deleted: README.md
         modified: templates / index.html
-</ pre>
+</pre>
 
-<h3> Check the difference between files to be committed </ h3>
+<h3> Check the difference between files to be committed </h3>
 
-Before committing, let's check the difference between the files that are actually committed. Use the "--cached" option of the "<a href="/blog/20210805092910.html"> git diff </a>" command to see the differences between the files that are actually committed. Note that "git diff" without the "--cached" option will show the difference between the working directory and the commit-prepared files.
+Before committing, let's check the difference between the files that are actually committed. Use the "--cached" option of the "<a href="/blog/20210805092910.html"> git diff</a>" command to see the differences between the files that are actually committed. Note that "git diff" without the "--cached" option will show the difference between the working directory and the commit-prepared files.
 
 <pre>
 #Check the differences between the files to be committed
 git diff --cached
-</ pre>
+</pre>
 
 This is an output example.
 
 <pre>
-$ git diff --cached
+$git diff --cached
 diff --git a /README.md b / README.md
 deleted file mode 100644
 index 372dc9d3..00000000
 --- a / README.md
 +++ / dev / null
-@@ -1,5 +0,0 @@
+@@-1,5 +0,0 @@
 diff --git a /README.md b / README.md
 deleted file mode 100644
 index 372dc9d3..00000000
 --- a / README.md
 +++ / dev / null
-@@ -1,5 +0,0 @@
+@@-1,5 +0,0 @@
 -<H1>
 --Introduction to Perl Seminar
--</ h1>
+-</h1>
 ――――
 ――――
 diff --git a / templates / index.html b / templates / index.html
 index 66c755ea..f0b95399 100644
 --- a / templates / index.html
 +++ b / templates / index.html
-@@ -2,7 +2,7 @@
+@@-2,7 +2,7 @@
 
- An introductory course on <b> Perl text processing </ b> and <b> regular expressions </ b>. Perl is a programming language that excels at <b> text processing </ b> and <b> regular expressions </ b> in the fields of <b> Linux server management </ b> and <b> Web system development </ b>. Active in. Perl as the basis for text processing and regular expressions
+ An introductory course on <b> Perl text processing </b> and <b> regular expressions </b>. Perl is a programming language that excels at <b> text processing </b> and <b> regular expressions </b> in the fields of <b> Linux server management </b> and <b> Web system development </b>. Active in. Perl as the basis for text processing and regular expressions
 Explains the logging language from the basics. You can also learn Linux and web development. Hello World!
 
 -Perl is installed on most Linux / Unix and is backwards compatible and stable
@@ -101,16 +101,16 @@ It has a good reputation for being operational.
 + Perl is installed on most Linux / Unix and is backwards compatible and stable
 It has a good reputation for being operational. How nice.
 
- <h3> Introduction to Perl Programming </ h3>
-</ pre>
+ <h3> Introduction to Perl Programming </h3>
+</pre>
  
-<h3> Cancel commit preparation </ h3>
+<h3> Cancel commit preparation </h3>
 
-Use the "<a href="/blog/20210806133244.html"> git reset </a>" command to cancel the commit preparation.
+Use the "<a href="/blog/20210806133244.html"> git reset</a>" command to cancel the commit preparation.
 
 <pre>
 # Cancel commit preparation
 git reset
-</ pre>
+</pre>
 
 If you make a mistake, never add the "--hard" option to the "git reset" command to cancel the commit preparation. All the changes in the working directory I've written so far will be canceled and tears will come out. If there are any changes left on the text editor, hurry up and overwrite them.

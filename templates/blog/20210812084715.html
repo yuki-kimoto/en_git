@@ -2,23 +2,23 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git push --transfer the contents of the local repository to the remote repository </ h2>
+<h2> git push --transfer the contents of the local repository to the remote repository </h2>
 
 You can use the git push command to transfer the contents of the local repository to the remote repository and update the beginning of the branch.
 
@@ -26,25 +26,25 @@ You can use the git push command to transfer the contents of the local repositor
 # Transfer the contents of the local repository to the remote repository
 #Update the location of the main branch of the remote repository
 git push origin main
-</ pre>
+</pre>
 
-<h3> To add a tag to a remote repository </ h3>
+<h3> To add a tag to a remote repository </h3>
 
 To transfer the tag to a remote repository, specify the tag name instead of the branch name.
 
 <pre>
 git push origin tag name
-</ pre>
+</pre>
 
-<h3> Add all tags to remote repository </ h3>
+<h3> Add all tags to remote repository </h3>
 
 If you want to add all tags to the remote repository, specify "--tags" as an argument.
 
 <pre>
 git push origin --tags
-</ pre>
+</pre>
 
-<h3> Is it better to make the branch name explicit? </ H3>
+<h3> Is it better to make the branch name explicit? </H3>
 
 Yes. It's a good idea to explicitly specify the branch name. If you omit the argument, versions prior to Git 2.0 will update the beginning of every branch.
 

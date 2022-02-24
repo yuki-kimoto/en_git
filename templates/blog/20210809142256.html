@@ -2,34 +2,34 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git fetch --remote repository information fetch </ h2>
+<h2> git fetch --remote repository information fetch </h2>
 
 You can use the git fetch command to fetch information about remote repositories. Think of it as synchronizing a remote repository to a local repository.
 
 <pre>
 #Get remote repository information
 git fetch
-</ pre>
+</pre>
 
-<h3> When do you use git fetch? </ h3>
+<h3> When do you use git fetch? </h3>
 
-Using the "<a href="/blog/20210813082314.html"> git pull </a>" command will do a "git fetch" as well as any changes to the remote repository branch specified for the current branch. It will merge.
+Using the "<a href="/blog/20210813082314.html"> git pull</a>" command will do a "git fetch" as well as any changes to the remote repository branch specified for the current branch. It will merge.
 
 So if you want to use "git fetch" rather than "git pull", you don't want to merge the changes in the remote branch into the current branch.
 
@@ -37,7 +37,7 @@ For example, you may want to create a local branch based on a remote branch crea
 
 Also, for security reasons, some developers do not use "git pull" at all and do the merge work separately from "git fetch".
 
-<h3> Please tell me what you should know with git fetch </ h3>
+<h3> Please tell me what you should know with git fetch </h3>
 
 The tags will be synced.
 
@@ -45,12 +45,12 @@ Distinguish between remote and local branches. When you do a git fetch, you fetc
 
 Remote branches have "origin" at the beginning, like "origin / foo".
 
-Let's display the local branch with the <a href="/blog/20201220091244.html"> git branch </a> command.
+Let's display the local branch with the <a href="/blog/20201220091244.html"> git branch</a> command.
 
 <pre>
 #View local branch
 git branch
-</ pre>
+</pre>
 
 Here is an example of the output of a local branch.
 
@@ -58,21 +58,21 @@ Here is an example of the output of a local branch.
 main
 foo
 bar bar
-</ pre>
+</pre>
 
 Let's display the remote branch with the "-r" option of the git branch command.
 
 <pre>
 #View remote branches
 git branch -r
-</ pre>
+</pre>
 
 Here is an example of the output result of a remote branch.
 
 <pre>
 origin / foo
 origin / baz
-</ pre>
+</pre>
 
 The tricky part is that a remote branch isn't a branch in a remote repository, but a branch in a local repository that points to a commit in a branch in a remote repository.
 

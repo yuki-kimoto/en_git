@@ -2,23 +2,23 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git add --put the file ready for commit </ h2>
+<h2> git add --put the file ready for commit </h2>
 
 Use the "git add" command to put the file ready for commit.
 
@@ -28,40 +28,40 @@ git add filename
 
 # Put all files under the current directory ready for commit
 git add.
-</ pre>
+</pre>
 
-<h3> What is commit preparation? </ H3>
+<h3> What is commit preparation? </H3>
 
 In Git, you need to prepare for a commit before you can commit. The "git add" command is a command to put a file ready for commit. It may be explained that you put it in the cache or put it in a staging state, but this site uses the term commit preparation.
 
-<h3> How to check the commit preparation status? </ H3>
+<h3> How to check the commit preparation status? </H3>
 
-Use the "<a href="/blog/20201110105057.html"> git status </a>" command to check the commit readiness.
+Use the "<a href="/blog/20201110105057.html"> git status</a>" command to check the commit readiness.
 
 <pre>
 git status
-</ pre>
+</pre>
 
-<h3> How to cancel the commit preparation status? </ H3>
+<h3> How to cancel the commit preparation status? </H3>
 
 If you accidentally put a file in the ready-to-commit state, you may want to cancel the ready-to-commit state.
 
-<h4> Uncommit ready for a specific file </ h4>
+<h4> Uncommit ready for a specific file </h4>
 
 Use "git rm --cached" to uncommit a particular file.
 
 <pre>
 # Release the ready-to-commit state for a specific file
 git rm --cached filename
-</ pre>
+</pre>
 
-<h4> Uncommit ready status for all files </ h4>
+<h4> Uncommit ready status for all files </h4>
 
 Use the "git reset" command to uncommit all files.
 
 <pre>
 # Uncommit ready for all files
 git reset
-</ pre>
+</pre>
 
 If you make a mistake, don't run "git reset --hard" to uncommit all files. Running "git reset --hard" will also bring back any changes made in the working directory.

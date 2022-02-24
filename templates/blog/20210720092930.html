@@ -2,23 +2,23 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/tutorial.html">
-        <span itemprop = "name"> Introduction </ span>
-      </a>
+        <span itemprop = "name"> Introduction </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> Initialize Git repository </ h2>
+<h2> Initialize Git repository </h2>
 
 Let's create a Git repository. The first task you need to do when managing a repository in Git is to initialize the repository.
 
@@ -28,35 +28,35 @@ Let's say the directory of the project where the source code is located is "myap
 mypp / foo.pl
     /bar.pl
     /baz.pl
-</ pre>
+</pre>
 
-To manage this directory as a Git repository, initialize it using the <a href="/blog/20201109142343.html"> git init </a> command.
+To manage this directory as a Git repository, initialize it using the <a href="/blog/20201109142343.html"> git init</a> command.
 
-Change to the "mypp" directory with the <a href="https://en.linux.perlzemi.com/blog/20191012191854.html"> cd command </a>.
+Change to the "mypp" directory with the <a href="https://en.linux.perlzemi.com/blog/20191012191854.html"> cd command</a>.
 
 <pre>
 cd mypp
-</ pre>
+</pre>
 
 Then run the "git init" command.
 
 <pre>
 #Initialize Git repository
 git init
-</ pre>
+</pre>
 
 If successful, the following message will be output.
 
 <pre>
 Initialized empty Git repository in /home/kimoto/labo/myapp/.git/
-</ pre>
+</pre>
 
-If you specify the "-a" option with the <a href="https://en.linux.perlzemi.com/blog/20191126082723.html"> ls command </a> and display the hidden directory, it will be ".git". There is a directory called.
+If you specify the "-a" option with the <a href="https://en.linux.perlzemi.com/blog/20191126082723.html"> ls command</a> and display the hidden directory, it will be ".git". There is a directory called.
 
 <pre>
-$ ls -a
+$ls -a
 ... foo.txt .git
-</ pre>
+</pre>
 
 The ".git" directory stores Git settings for this repository and Git commit information.
 

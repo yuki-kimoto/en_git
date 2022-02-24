@@ -2,54 +2,54 @@
   <ul itemscope itemtype = "http://schema.org/BreadcrumbList">
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/">
-        <span itemprop = "name"> Git </ span>
-      </a>
+        <span itemprop = "name"> Git </span>
+     </a>
       <meta itemprop = "position" content = "1" />
-    </ li>
+    </li>
     <li itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem">
       <a itemprop="item" href="/commands.html">
-        <span itemprop = "name"> command </ span>
-      </a>
+        <span itemprop = "name"> command </span>
+     </a>
       <meta itemprop = "position" content = "2" />
-    </ li>
+    </li>
     <li>
       here
-    </ li>
-  </ ul>
-</ div>
+    </li>
+  </ul>
+</div>
 
-<h2> git tag --tagging </ h2>
+<h2> git tag --tagging </h2>
 
 You can add tags with the "git tag" command. Tags are a feature that allows you to name one of a particular commit. It is used when you want to give a version name or remember a specific commit position.
 
-<h3> Add a tag name to the beginning of the current commit </ h3>
+<h3> Add a tag name to the beginning of the current commit </h3>
 
 Let's give the current commit a tag name. The tag name is "foo".
 
 <pre>
 #Tag
 git tag foo
-</ pre>
+</pre>
 
-<h4> Specify the commit ID and give it a tag name </ h4>
+<h4> Specify the commit ID and give it a tag name </h4>
 
 You can also specify the commit ID and give it a tag name.
 
 <pre>
 #Tag
 git tag foo commit ID
-</ pre>
+</pre>
 
-If you want to find out the commit ID, use the "<a href="/blog/20201103093112.html"> git log </a>" command.
+If you want to find out the commit ID, use the "<a href="/blog/20201103093112.html"> git log</a>" command.
 
-<h3> Display a list of tags </ h3>
+<h3> Display a list of tags </h3>
 
 To see a list of tags, run the "git tag" command with no arguments.
 
 <pre>
 #Display a list of tags
 git tag
-</ pre>
+</pre>
 
 This is a sample output result.
 
@@ -57,34 +57,34 @@ This is a sample output result.
 v1.0
 v1.2
 20210816
-</ pre>
+</pre>
 
-<h3> Reflect tags in remote repository </ h3>
+<h3> Reflect tags in remote repository </h3>
 
-To reflect the tag in the remote repository, use the "<a href="/blog/20210812084715.html"> git push </a>" command and set it to "git push remote branch name tag name".
+To reflect the tag in the remote repository, use the "<a href="/blog/20210812084715.html"> git push</a>" command and set it to "git push remote branch name tag name".
 <pre>
 Reflect # tag in remote repository
 git push origin v1.0
-</ pre>
+</pre>
 
-<h3> Reflect all tags in remote repository </ h3>
+<h3> Reflect all tags in remote repository </h3>
 
-To apply all tags to the remote repository, use the "--tags" option with the <a href="/blog/20210812084715.html"> git push </a> command.
+To apply all tags to the remote repository, use the "--tags" option with the <a href="/blog/20210812084715.html"> git push</a> command.
 
 <pre>
 # Reflect all tags in remote repository
 git tag origin --tags
-</ pre>
+</pre>
 
-<h3> Add version number </ h3>
+<h3> Add version number </h3>
 
 Let's add a version number with the "git tag" command.
 
 <pre>
 git tag v1.0
-</ pre>
+</pre>
 
-<h3> Use the date as the tag name and memorize it </ h3>
+<h3> Use the date as the tag name and memorize it </h3>
 
 A common technique is to tag the current date to remember the commit at that time. In Git, it's common to find mistakes after a merge and wonder how to get back to what they were before the merge.
 
@@ -93,10 +93,10 @@ In such a case, it is convenient to use the date and give a tag name in advance 
 <pre>
 # Use date as tag name
 git tag 20210816
-</ pre>
+</pre>
 
-If you want to return to the previous state, use the <a href="/blog/20210806133244.html"> git reset </a> command and set it to "git reset --hard tag name". (Be careful when using "git reset --hard" in the "git reset" command.)
+If you want to return to the previous state, use the <a href="/blog/20210806133244.html"> git reset</a> command and set it to "git reset --hard tag name". (Be careful when using "git reset --hard" in the "git reset" command.)
 
 <pre>
 git reset --hard 20210816
-</ pre>
+</pre>
